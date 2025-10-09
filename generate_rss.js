@@ -79,16 +79,23 @@ https.get(htmlUrl, res => {
 
         const title = `${objekt} – ${veckodag} ${starttid}-${sluttid}`;
 
+        // Skapa description med CSS och HTML
         const description = `<![CDATA[
-  <p><strong>Objekt:</strong> ${objekt}</p>
-  <p><strong>Information:</strong> ${info}</p>
-  <p><strong>Startdatum:</strong> ${startdatum}</p>
-  <p><strong>Slutdatum:</strong> ${slutdatum}</p>
-  <p><strong>Veckodag:</strong> ${veckodag}</p>
-  <p><strong>Tid:</strong> ${starttid} - ${sluttid}</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> ${objekt}</p>
+    <p><strong>Information:</strong> ${info}</p>
+    <p><strong>Startdatum:</strong> ${startdatum}</p>
+    <p><strong>Slutdatum:</strong> ${slutdatum}</p>
+    <p><strong>Veckodag:</strong> ${veckodag}</p>
+    <p><strong>Tid:</strong> ${starttid} - ${sluttid}</p>
+  </div>
 ]]>`;
 
-        // pubDate för RSS och sortering
         let pubDate;
         let sortDate;
         try {
@@ -125,7 +132,7 @@ https.get(htmlUrl, res => {
 </rss>`;
 
       fs.writeFileSync('feed.xml', rss, { encoding: 'utf8' });
-      console.log('✅ RSS feed generated successfully!');
+      console.log('✅ RSS feed generated successfully with styling!');
     } catch (err) {
       console.error('❌ Error parsing HTML:', err);
     }
