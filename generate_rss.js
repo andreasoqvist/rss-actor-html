@@ -74,9 +74,7 @@ https.get(htmlUrl, res => {
         // Hoppa över rader utan <td> eller för korta rader (t.ex. header)
         if (cols.length < 2) return;
 
-        // Anpassa baserat på hur din tabell är strukturerad.
-        // Tidigare JSON-exempel visade fälten i ordning:
-        // [Startdatum, Slutdatum, Veckodag, Starttid, Sluttid, Objekt, Information]
+        // Fälten i ordning: [Startdatum, Slutdatum, Veckodag, Starttid, Sluttid, Objekt, Information]
         const startdatum = cols[0] || '';
         const slutdatum  = cols[1] || '';
         const veckodag   = cols[2] || '';
@@ -117,7 +115,11 @@ https.get(htmlUrl, res => {
 </rss>`;
 
       fs.writeFileSync('feed.xml', rss, { encoding: 'utf8' });
-      console.log('✅ RSS feed generated successfully!');
+
+      // ✅ Skriv ut antal items
+      const itemCount = rssItems.split('<item>').length - 1;
+      console.log(`✅ RSS feed generated successfully! Total items: ${itemCount}`);
+
     } catch (err) {
       console.error('❌ Error parsing HTML:', err);
     }
