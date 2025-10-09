@@ -1,6 +1,6 @@
 const fs = require('fs');
 const https = require('https');
-const cheerio = require('cheerio');
+const cheerio = require('cheerio'); // Node 18 har detta tillgängligt i Actions
 
 const htmlUrl = 'https://exportservice.actorsmartbook.se/ExportGridStyle.aspx?com=5fe496d9-bdd6-4988-b679-4f249a03a2b6&con=371e91b7-b035-4d08-9c00-3c8bab4bf2de';
 
