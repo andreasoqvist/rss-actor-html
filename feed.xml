@@ -9,132 +9,209 @@
 <item>
   <title>Objekt – Veckodag Starttid-Sluttid</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> Objekt</p>
-  <p><strong>Information:</strong> Information</p>
-  <p><strong>Startdatum:</strong> Startdatum</p>
-  <p><strong>Slutdatum:</strong> Slutdatum</p>
-  <p><strong>Veckodag:</strong> Veckodag</p>
-  <p><strong>Tid:</strong> Starttid - Sluttid</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> Objekt</p>
+    <p><strong>Information:</strong> Information</p>
+    <p><strong>Startdatum:</strong> Startdatum</p>
+    <p><strong>Slutdatum:</strong> Slutdatum</p>
+    <p><strong>Veckodag:</strong> Veckodag</p>
+    <p><strong>Tid:</strong> Starttid - Sluttid</p>
+  </div>
 ]]></description>
-  <pubDate>Thu, 09 Oct 2025 10:32:08 GMT</pubDate>
+  <pubDate>Thu, 09 Oct 2025 10:36:33 GMT</pubDate>
 </item>
 <item>
   <title> –  -</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> </p>
-  <p><strong>Information:</strong> </p>
-  <p><strong>Startdatum:</strong>  </p>
-  <p><strong>Slutdatum:</strong>  </p>
-  <p><strong>Veckodag:</strong> </p>
-  <p><strong>Tid:</strong>  - </p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> </p>
+    <p><strong>Information:</strong> </p>
+    <p><strong>Startdatum:</strong>  </p>
+    <p><strong>Slutdatum:</strong>  </p>
+    <p><strong>Veckodag:</strong> </p>
+    <p><strong>Tid:</strong>  - </p>
+  </div>
 ]]></description>
-  <pubDate>Thu, 09 Oct 2025 10:32:08 GMT</pubDate>
+  <pubDate>Thu, 09 Oct 2025 10:36:33 GMT</pubDate>
 </item>
 <item>
   <title>Friidrottsytor HH (exkl. innerplan) – torsdag 16:00-17:30</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
-  <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
-  <p><strong>Startdatum:</strong> 2025-10-09</p>
-  <p><strong>Slutdatum:</strong> 2025-10-09</p>
-  <p><strong>Veckodag:</strong> torsdag</p>
-  <p><strong>Tid:</strong> 16:00 - 17:30</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
+    <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
+    <p><strong>Startdatum:</strong> 2025-10-09</p>
+    <p><strong>Slutdatum:</strong> 2025-10-09</p>
+    <p><strong>Veckodag:</strong> torsdag</p>
+    <p><strong>Tid:</strong> 16:00 - 17:30</p>
+  </div>
 ]]></description>
   <pubDate>Thu, 09 Oct 2025 14:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Friidrottsytor HH (exkl. innerplan) – torsdag 19:30-21:00</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
-  <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
-  <p><strong>Startdatum:</strong> 2025-10-09</p>
-  <p><strong>Slutdatum:</strong> 2025-10-09</p>
-  <p><strong>Veckodag:</strong> torsdag</p>
-  <p><strong>Tid:</strong> 19:30 - 21:00</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
+    <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
+    <p><strong>Startdatum:</strong> 2025-10-09</p>
+    <p><strong>Slutdatum:</strong> 2025-10-09</p>
+    <p><strong>Veckodag:</strong> torsdag</p>
+    <p><strong>Tid:</strong> 19:30 - 21:00</p>
+  </div>
 ]]></description>
   <pubDate>Thu, 09 Oct 2025 17:30:00 GMT</pubDate>
 </item>
 <item>
   <title>Friidrottsytor HH (exkl. innerplan) – fredag 16:00-20:00</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
-  <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
-  <p><strong>Startdatum:</strong> 2025-10-10</p>
-  <p><strong>Slutdatum:</strong> 2025-10-10</p>
-  <p><strong>Veckodag:</strong> fredag</p>
-  <p><strong>Tid:</strong> 16:00 - 20:00</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
+    <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
+    <p><strong>Startdatum:</strong> 2025-10-10</p>
+    <p><strong>Slutdatum:</strong> 2025-10-10</p>
+    <p><strong>Veckodag:</strong> fredag</p>
+    <p><strong>Tid:</strong> 16:00 - 20:00</p>
+  </div>
 ]]></description>
   <pubDate>Fri, 10 Oct 2025 14:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Friidrottsytor HH (exkl. innerplan) – söndag 13:00-17:00</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
-  <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
-  <p><strong>Startdatum:</strong> 2025-10-12</p>
-  <p><strong>Slutdatum:</strong> 2025-10-12</p>
-  <p><strong>Veckodag:</strong> söndag</p>
-  <p><strong>Tid:</strong> 13:00 - 17:00</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
+    <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
+    <p><strong>Startdatum:</strong> 2025-10-12</p>
+    <p><strong>Slutdatum:</strong> 2025-10-12</p>
+    <p><strong>Veckodag:</strong> söndag</p>
+    <p><strong>Tid:</strong> 13:00 - 17:00</p>
+  </div>
 ]]></description>
   <pubDate>Sun, 12 Oct 2025 11:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Friidrottsytor HH (exkl. innerplan) – måndag 16:00-18:00</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
-  <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
-  <p><strong>Startdatum:</strong> 2025-10-13</p>
-  <p><strong>Slutdatum:</strong> 2025-10-13</p>
-  <p><strong>Veckodag:</strong> måndag</p>
-  <p><strong>Tid:</strong> 16:00 - 18:00</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
+    <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
+    <p><strong>Startdatum:</strong> 2025-10-13</p>
+    <p><strong>Slutdatum:</strong> 2025-10-13</p>
+    <p><strong>Veckodag:</strong> måndag</p>
+    <p><strong>Tid:</strong> 16:00 - 18:00</p>
+  </div>
 ]]></description>
   <pubDate>Mon, 13 Oct 2025 14:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Friidrottsytor HH (exkl. innerplan) – måndag 19:30-21:00</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
-  <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
-  <p><strong>Startdatum:</strong> 2025-10-13</p>
-  <p><strong>Slutdatum:</strong> 2025-10-13</p>
-  <p><strong>Veckodag:</strong> måndag</p>
-  <p><strong>Tid:</strong> 19:30 - 21:00</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
+    <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
+    <p><strong>Startdatum:</strong> 2025-10-13</p>
+    <p><strong>Slutdatum:</strong> 2025-10-13</p>
+    <p><strong>Veckodag:</strong> måndag</p>
+    <p><strong>Tid:</strong> 19:30 - 21:00</p>
+  </div>
 ]]></description>
   <pubDate>Mon, 13 Oct 2025 17:30:00 GMT</pubDate>
 </item>
 <item>
   <title>Friidrottsytor HH (exkl. innerplan) – tisdag 16:00-17:30</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
-  <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
-  <p><strong>Startdatum:</strong> 2025-10-14</p>
-  <p><strong>Slutdatum:</strong> 2025-10-14</p>
-  <p><strong>Veckodag:</strong> tisdag</p>
-  <p><strong>Tid:</strong> 16:00 - 17:30</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
+    <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
+    <p><strong>Startdatum:</strong> 2025-10-14</p>
+    <p><strong>Slutdatum:</strong> 2025-10-14</p>
+    <p><strong>Veckodag:</strong> tisdag</p>
+    <p><strong>Tid:</strong> 16:00 - 17:30</p>
+  </div>
 ]]></description>
   <pubDate>Tue, 14 Oct 2025 14:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Friidrottsytor HH (exkl. innerplan) – tisdag 20:00-21:00</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
-  <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
-  <p><strong>Startdatum:</strong> 2025-10-14</p>
-  <p><strong>Slutdatum:</strong> 2025-10-14</p>
-  <p><strong>Veckodag:</strong> tisdag</p>
-  <p><strong>Tid:</strong> 20:00 - 21:00</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
+    <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
+    <p><strong>Startdatum:</strong> 2025-10-14</p>
+    <p><strong>Slutdatum:</strong> 2025-10-14</p>
+    <p><strong>Veckodag:</strong> tisdag</p>
+    <p><strong>Tid:</strong> 20:00 - 21:00</p>
+  </div>
 ]]></description>
   <pubDate>Tue, 14 Oct 2025 18:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Friidrottsytor HH (exkl. innerplan) – onsdag 19:30-21:00</title>
   <description><![CDATA[
-  <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
-  <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
-  <p><strong>Startdatum:</strong> 2025-10-15</p>
-  <p><strong>Slutdatum:</strong> 2025-10-15</p>
-  <p><strong>Veckodag:</strong> onsdag</p>
-  <p><strong>Tid:</strong> 19:30 - 21:00</p>
+  <style>
+    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
+    .rss-item p { margin: 0.2em 0; }
+    .rss-item strong { color: #2a7ae2; }
+  </style>
+  <div class="rss-item">
+    <p><strong>Objekt:</strong> Friidrottsytor HH (exkl. innerplan)</p>
+    <p><strong>Information:</strong> Tider för friidrotts- och löparkort</p>
+    <p><strong>Startdatum:</strong> 2025-10-15</p>
+    <p><strong>Slutdatum:</strong> 2025-10-15</p>
+    <p><strong>Veckodag:</strong> onsdag</p>
+    <p><strong>Tid:</strong> 19:30 - 21:00</p>
+  </div>
 ]]></description>
   <pubDate>Wed, 15 Oct 2025 17:30:00 GMT</pubDate>
 </item>
