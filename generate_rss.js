@@ -1,4 +1,4 @@
-// generate_rss.js (ingen cheerio, ingen node-fetch — använder bara https)
+// generate_rss.js
 const fs = require('fs');
 const https = require('https');
 
@@ -20,7 +20,7 @@ function cleanString(str) {
   return str.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\uD800-\uDFFF]/g, '');
 }
 
-// Enkel HTML-entity-dekodning (vanligaste)
+// Enkel HTML-entity-dekodning
 function decodeHtmlEntities(s) {
   if (!s) return '';
   s = s.replace(/&nbsp;/g, ' ')
@@ -31,25 +31,23 @@ function decodeHtmlEntities(s) {
        .replace(/&gt;/g, '>')
        .replace(/&quot;/g, '"')
        .replace(/&apos;/g, "'");
-  // numeriska entiteter
   s = s.replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n,10)));
   s = s.replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCharCode(parseInt(h,16)));
   return s;
 }
 
-// Ta bort HTML-taggar (enkelt)
+// Ta bort HTML-taggar
 function stripTags(s) {
   if (!s) return '';
   return s.replace(/<[^>]*>/g, '').trim();
 }
 
-// Hämta HTML och parsa tabellen med regex
+// Hämta HTML och parsa tabellen
 https.get(htmlUrl, res => {
   let html = '';
   res.on('data', chunk => html += chunk);
   res.on('end', () => {
     try {
-      // Extrahera alla <tr>...</tr>
       const trRegex = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
       let match;
       const rows = [];
@@ -59,22 +57,18 @@ https.get(htmlUrl, res => {
 
       let rssItems = '';
 
-      rows.forEach((rowHtml, idx) => {
-        // Extrahera <td>...</td> eller <th> om det skulle finnas
+      rows.forEach(rowHtml => {
         const tdRegex = /<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi;
         const cols = [];
         let m;
         while ((m = tdRegex.exec(rowHtml)) !== null) {
-          // decoda entities och ta bort inre taggar
           let cell = decodeHtmlEntities(stripTags(m[1]));
           cell = cleanString(cell);
           cols.push(cell);
         }
 
-        // Hoppa över rader utan <td> eller för korta rader (t.ex. header)
         if (cols.length < 2) return;
 
-        // Fälten i ordning: [Startdatum, Slutdatum, Veckodag, Starttid, Sluttid, Objekt, Information]
         const startdatum = cols[0] || '';
         const slutdatum  = cols[1] || '';
         const veckodag   = cols[2] || '';
@@ -84,9 +78,19 @@ https.get(htmlUrl, res => {
         const info       = cols[6] || '';
 
         const title = `${objekt} – ${veckodag} ${starttid}-${sluttid}`;
-        const description = `${info} (${startdatum}, ${veckodag}, ${starttid}-${sluttid})`;
 
-        // För pubDate: försök skapa ett giltigt datum, annars använd nu
+        // Skapa HTML-description med CDATA
+        const description = `
+<![CDATA[
+  <p><strong>Information:</strong> ${info}</p>
+  <p><strong>Startdatum:</strong> ${startdatum}</p>
+  <p><strong>Slutdatum:</strong> ${slutdatum}</p>
+  <p><strong>Veckodag:</strong> ${veckodag}</p>
+  <p><strong>Tid:</strong> ${starttid} - ${sluttid}</p>
+  <p><strong>Objekt:</strong> ${objekt}</p>
+]]>
+`;
+
         let pubDate;
         try {
           const d = new Date(`${startdatum}T${starttid}:00+02:00`);
@@ -98,7 +102,7 @@ https.get(htmlUrl, res => {
         rssItems += `
 <item>
   <title>${escapeXml(title)}</title>
-  <description>${escapeXml(description)}</description>
+  <description>${description}</description>
   <pubDate>${pubDate}</pubDate>
 </item>`;
       });
@@ -115,11 +119,7 @@ https.get(htmlUrl, res => {
 </rss>`;
 
       fs.writeFileSync('feed.xml', rss, { encoding: 'utf8' });
-
-      // ✅ Skriv ut antal items
-      const itemCount = rssItems.split('<item>').length - 1;
-      console.log(`✅ RSS feed generated successfully! Total items: ${itemCount}`);
-
+      console.log('✅ RSS feed generated successfully!');
     } catch (err) {
       console.error('❌ Error parsing HTML:', err);
     }
