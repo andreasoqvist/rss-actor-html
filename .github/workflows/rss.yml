@@ -1,0 +1,33 @@
+name: Generate RSS
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # var 30:e minut
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install cheerio
+        run: npm install cheerio
+
+      - name: Run RSS generator
+        run: node generate_rss.js
+
+      - name: Commit and push feed.xml
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add feed.xml
+          git commit -m "Update RSS feed [skip ci]" || echo "No changes"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
