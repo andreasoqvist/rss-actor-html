@@ -55,7 +55,7 @@ https.get(htmlUrl, res => {
         rows.push(match[1]);
       }
 
-      let items = [];
+      let rssItems = '';
 
       rows.forEach(rowHtml => {
         const tdRegex = /<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi;
@@ -69,56 +69,37 @@ https.get(htmlUrl, res => {
 
         if (cols.length < 2) return;
 
-        const startdatum = cols[0] || '';
-        const slutdatum  = cols[1] || '';
-        const veckodag   = cols[2] || '';
-        const starttid   = cols[3] || '';
-        const sluttid    = cols[4] || '';
-        const objekt     = cols[5] || '';
-        const info       = cols[6] || '';
+        const datum    = cols[0] || '';
+        const veckodag = cols[2] || '';
+        const starttid = cols[3] || '';
+        const sluttid  = cols[4] || '';
 
-        const title = `${objekt} – ${veckodag} ${starttid}-${sluttid}`;
+        const title = `${veckodag} ${starttid}-${sluttid}`;
 
-        // Skapa description med CSS och HTML
-        const description = `<![CDATA[
-  <style>
-    .rss-item { font-family: Arial, sans-serif; line-height: 1.4em; }
-    .rss-item p { margin: 0.2em 0; }
-    .rss-item strong { color: #2a7ae2; }
-  </style>
-  <div class="rss-item">
-    <p><strong>Objekt:</strong> ${objekt}</p>
-    <p><strong>Information:</strong> ${info}</p>
-    <p><strong>Startdatum:</strong> ${startdatum}</p>
-    <p><strong>Slutdatum:</strong> ${slutdatum}</p>
-    <p><strong>Veckodag:</strong> ${veckodag}</p>
-    <p><strong>Tid:</strong> ${starttid} - ${sluttid}</p>
-  </div>
-]]>`;
+        // Enkel description med datum och tid
+        const description = `
+<![CDATA[
+  <p><strong>Datum:</strong> ${datum}</p>
+  <p><strong>Tid:</strong> ${starttid} - ${sluttid}</p>
+  <p><strong>Veckodag:</strong> ${veckodag}</p>
+]]>
+`;
 
         let pubDate;
-        let sortDate;
         try {
-          const d = new Date(`${startdatum}T${starttid}:00+02:00`);
+          const d = new Date(`${datum}T${starttid}:00+02:00`);
           pubDate = isNaN(d.getTime()) ? new Date().toUTCString() : d.toUTCString();
-          sortDate = isNaN(d.getTime()) ? new Date(0) : d;
         } catch (e) {
           pubDate = new Date().toUTCString();
-          sortDate = new Date(0);
         }
 
-        items.push({ title, description, pubDate, sortDate });
-      });
-
-      // Sortera items kronologiskt
-      items.sort((a, b) => a.sortDate - b.sortDate);
-
-      let rssItems = items.map(item => `
+        rssItems += `
 <item>
-  <title>${escapeXml(item.title)}</title>
-  <description>${item.description}</description>
-  <pubDate>${item.pubDate}</pubDate>
-</item>`).join('');
+  <title>${escapeXml(title)}</title>
+  <description>${description}</description>
+  <pubDate>${pubDate}</pubDate>
+</item>`;
+      });
 
       const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
@@ -132,7 +113,7 @@ https.get(htmlUrl, res => {
 </rss>`;
 
       fs.writeFileSync('feed.xml', rss, { encoding: 'utf8' });
-      console.log('✅ RSS feed generated successfully with styling!');
+      console.log('✅ RSS feed generated successfully!');
     } catch (err) {
       console.error('❌ Error parsing HTML:', err);
     }
