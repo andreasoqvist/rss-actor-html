@@ -2,7 +2,7 @@ name: Generate RSS
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # var 30:e minut
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -19,8 +19,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install cheerio node-fetch@2
-
+        run: npm install cheerio
 
       - name: Run RSS generator
         run: node generate_rss.js
