@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Friidrottsytor HH – Schema</title>
+  <link>https://exportservice.actorsmartbook.se/ExportGridStyle.aspx?com=5fe496d9-bdd6-4988-b679-4f249a03a2b6&amp;con=371e91b7-b035-4d08-9c00-3c8bab4bf2de</link>
+  <description>Automatiskt genererat RSS-flöde från Actorsmartbook</description>
+  <language>sv-se</language>
+  
+<item>
+  <title>Objekt – Veckodag Starttid-Sluttid</title>
+  <description>Information (Startdatum, Veckodag, Starttid-Sluttid)</description>
+  <pubDate>Thu, 09 Oct 2025 10:18:39 GMT</pubDate>
+</item>
+<item>
+  <title> –  -</title>
+  <description> ( , , -)</description>
+  <pubDate>Thu, 09 Oct 2025 10:18:39 GMT</pubDate>
+</item>
+<item>
+  <title>Friidrottsytor HH (exkl. innerplan) – torsdag 16:00-17:30</title>
+  <description>Tider för friidrotts- och löparkort (2025-10-09, torsdag, 16:00-17:30)</description>
+  <pubDate>Thu, 09 Oct 2025 14:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Friidrottsytor HH (exkl. innerplan) – torsdag 19:30-21:00</title>
+  <description>Tider för friidrotts- och löparkort (2025-10-09, torsdag, 19:30-21:00)</description>
+  <pubDate>Thu, 09 Oct 2025 17:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>Friidrottsytor HH (exkl. innerplan) – fredag 16:00-20:00</title>
+  <description>Tider för friidrotts- och löparkort (2025-10-10, fredag, 16:00-20:00)</description>
+  <pubDate>Fri, 10 Oct 2025 14:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Friidrottsytor HH (exkl. innerplan) – söndag 13:00-17:00</title>
+  <description>Tider för friidrotts- och löparkort (2025-10-12, söndag, 13:00-17:00)</description>
+  <pubDate>Sun, 12 Oct 2025 11:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Friidrottsytor HH (exkl. innerplan) – måndag 16:00-18:00</title>
+  <description>Tider för friidrotts- och löparkort (2025-10-13, måndag, 16:00-18:00)</description>
+  <pubDate>Mon, 13 Oct 2025 14:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Friidrottsytor HH (exkl. innerplan) – måndag 19:30-21:00</title>
+  <description>Tider för friidrotts- och löparkort (2025-10-13, måndag, 19:30-21:00)</description>
+  <pubDate>Mon, 13 Oct 2025 17:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>Friidrottsytor HH (exkl. innerplan) – tisdag 16:00-17:30</title>
+  <description>Tider för friidrotts- och löparkort (2025-10-14, tisdag, 16:00-17:30)</description>
+  <pubDate>Tue, 14 Oct 2025 14:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Friidrottsytor HH (exkl. innerplan) – tisdag 20:00-21:00</title>
+  <description>Tider för friidrotts- och löparkort (2025-10-14, tisdag, 20:00-21:00)</description>
+  <pubDate>Tue, 14 Oct 2025 18:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Friidrottsytor HH (exkl. innerplan) – onsdag 19:30-21:00</title>
+  <description>Tider för friidrotts- och löparkort (2025-10-15, onsdag, 19:30-21:00)</description>
+  <pubDate>Wed, 15 Oct 2025 17:30:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
