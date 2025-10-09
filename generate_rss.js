@@ -1,6 +1,7 @@
+// generate_rss.js
 const fs = require('fs');
 const https = require('https');
-const cheerio = require('cheerio'); // Node 18 har detta tillgängligt i Actions
+const cheerio = require('cheerio');
 
 const htmlUrl = 'https://exportservice.actorsmartbook.se/ExportGridStyle.aspx?com=5fe496d9-bdd6-4988-b679-4f249a03a2b6&con=371e91b7-b035-4d08-9c00-3c8bab4bf2de';
 
@@ -20,23 +21,24 @@ function cleanString(str) {
   return str.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\uD800-\uDFFF]/g, '');
 }
 
+// Hämta HTML via https
 https.get(htmlUrl, res => {
-  let html = '';
-  res.on('data', chunk => html += chunk);
+  let data = '';
+  res.on('data', chunk => data += chunk);
   res.on('end', () => {
-    const $ = cheerio.load(html);
+    const $ = cheerio.load(data);
     let rssItems = '';
 
     $('tr').each((i, row) => {
       const cells = $(row).find('td');
       if (cells.length > 0) {
         const startdatum = $(cells[0]).text().trim();
-        const slutdatum = $(cells[1]).text().trim();
-        const veckodag  = $(cells[2]).text().trim();
-        const starttid  = $(cells[3]).text().trim();
-        const sluttid   = $(cells[4]).text().trim();
-        const objekt    = $(cells[5]).text().trim();
-        const info      = $(cells[6]).text().trim();
+        const slutdatum  = $(cells[1]).text().trim();
+        const veckodag   = $(cells[2]).text().trim();
+        const starttid   = $(cells[3]).text().trim();
+        const sluttid    = $(cells[4]).text().trim();
+        const objekt     = $(cells[5]).text().trim();
+        const info       = $(cells[6]).text().trim();
 
         const title = `${objekt} – ${veckodag} ${starttid}-${sluttid}`;
         const description = `${info} (${startdatum}, ${veckodag}, ${starttid}-${sluttid})`;
@@ -66,5 +68,5 @@ https.get(htmlUrl, res => {
     console.log('✅ RSS feed generated successfully!');
   });
 }).on('error', err => {
-  console.error('❌ Error fetching HTML:', err.message);
+  console.error('❌ Error fetching HTML:', err);
 });
