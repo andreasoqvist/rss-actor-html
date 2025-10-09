@@ -1,33 +1,67 @@
-name: Generate RSS
+const fs = require('fs');
+const cheerio = require('cheerio');
 
-on:
-  schedule:
-    - cron: '*/30 * * * *'
-  workflow_dispatch:
+const htmlUrl = 'https://exportservice.actorsmartbook.se/ExportGridStyle.aspx?com=5fe496d9-bdd6-4988-b679-4f249a03a2b6&con=371e91b7-b035-4d08-9c00-3c8bab4bf2de';
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+// Escapa XML-specialtecken
+function escapeXml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&apos;');
+}
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+// Ta bort ogiltiga kontrolltecken
+function cleanString(str) {
+    if (!str) return '';
+    return str.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\uD800-\uDFFF]/g, '');
+}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+// Node 18 inbyggd fetch
+fetch(htmlUrl)
+  .then(res => res.text())
+  .then(data => {
+      const $ = cheerio.load(data);
 
-      - name: Install dependencies
-        run: npm install cheerio
+      let rssItems = '';
+      $('tr').each((i, row) => {
+          const cells = $(row).find('td');
+          if (cells.length > 0) {
+              const startdatum = $(cells[0]).text().trim();
+              const slutdatum = $(cells[1]).text().trim();
+              const veckodag  = $(cells[2]).text().trim();
+              const starttid  = $(cells[3]).text().trim();
+              const sluttid   = $(cells[4]).text().trim();
+              const objekt    = $(cells[5]).text().trim();
+              const info      = $(cells[6]).text().trim();
 
-      - name: Run RSS generator
-        run: node generate_rss.js
+              const title = `${objekt} – ${veckodag} ${starttid}-${sluttid}`;
+              const description = `${info} (${startdatum}, ${veckodag}, ${starttid}-${sluttid})`;
+              const pubDate = new Date(`${startdatum}T${starttid}:00+02:00`).toUTCString();
 
-      - name: Commit and push feed.xml
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add feed.xml
-          git commit -m "Update RSS feed [skip ci]" || echo "No changes"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+              rssItems += `
+<item>
+  <title>${escapeXml(cleanString(title))}</title>
+  <description>${escapeXml(cleanString(description))}</description>
+  <pubDate>${pubDate}</pubDate>
+</item>`;
+          }
+      });
+
+      const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Friidrottsytor HH – Schema</title>
+  <link>${escapeXml(cleanString(htmlUrl))}</link>
+  <description>Automatiskt genererat RSS-flöde från Actorsmartbook</description>
+  <language>sv-se</language>
+  ${rssItems}
+</channel>
+</rss>`;
+
+      fs.writeFileSync('feed.xml', rss, { encoding: 'utf8' });
+      console.log('RSS feed generated successfully!');
+  })
+  .catch(err => console.error(err));
