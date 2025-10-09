@@ -55,7 +55,7 @@ https.get(htmlUrl, res => {
         rows.push(match[1]);
       }
 
-      let rssItems = '';
+      let items = [];
 
       rows.forEach(rowHtml => {
         const tdRegex = /<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi;
@@ -79,33 +79,39 @@ https.get(htmlUrl, res => {
 
         const title = `${objekt} – ${veckodag} ${starttid}-${sluttid}`;
 
-        // Skapa HTML-description med CDATA
-        const description = `
-<![CDATA[
+        const description = `<![CDATA[
+  <p><strong>Objekt:</strong> ${objekt}</p>
   <p><strong>Information:</strong> ${info}</p>
   <p><strong>Startdatum:</strong> ${startdatum}</p>
   <p><strong>Slutdatum:</strong> ${slutdatum}</p>
   <p><strong>Veckodag:</strong> ${veckodag}</p>
   <p><strong>Tid:</strong> ${starttid} - ${sluttid}</p>
-  <p><strong>Objekt:</strong> ${objekt}</p>
-]]>
-`;
+]]>`;
 
+        // pubDate för RSS och sortering
         let pubDate;
+        let sortDate;
         try {
           const d = new Date(`${startdatum}T${starttid}:00+02:00`);
           pubDate = isNaN(d.getTime()) ? new Date().toUTCString() : d.toUTCString();
+          sortDate = isNaN(d.getTime()) ? new Date(0) : d;
         } catch (e) {
           pubDate = new Date().toUTCString();
+          sortDate = new Date(0);
         }
 
-        rssItems += `
-<item>
-  <title>${escapeXml(title)}</title>
-  <description>${description}</description>
-  <pubDate>${pubDate}</pubDate>
-</item>`;
+        items.push({ title, description, pubDate, sortDate });
       });
+
+      // Sortera items kronologiskt
+      items.sort((a, b) => a.sortDate - b.sortDate);
+
+      let rssItems = items.map(item => `
+<item>
+  <title>${escapeXml(item.title)}</title>
+  <description>${item.description}</description>
+  <pubDate>${item.pubDate}</pubDate>
+</item>`).join('');
 
       const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
