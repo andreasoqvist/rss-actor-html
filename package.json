@@ -1,0 +1,10 @@
+{
+  "name": "rss-actor-html",
+  "version": "1.0.0",
+  "description": "RSS generator for Actorsmartbook HTML export",
+  "main": "generate_rss.js",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
