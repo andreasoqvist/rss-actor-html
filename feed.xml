@@ -15,7 +15,7 @@
   <p><strong>Veckodag:</strong> Veckodag</p>
 ]]>
 </description>
-  <pubDate>Tue, 25 Nov 2025 22:42:04 GMT</pubDate>
+  <pubDate>Tue, 25 Nov 2025 23:17:26 GMT</pubDate>
 </item>
 <item>
   <title> -</title>
@@ -26,29 +26,7 @@
   <p><strong>Veckodag:</strong> </p>
 ]]>
 </description>
-  <pubDate>Tue, 25 Nov 2025 22:42:04 GMT</pubDate>
-</item>
-<item>
-  <title>tisdag 16:00-17:30</title>
-  <description>
-<![CDATA[
-  <p><strong>Datum:</strong> 2025-11-25</p>
-  <p><strong>Tid:</strong> 16:00 - 17:30</p>
-  <p><strong>Veckodag:</strong> tisdag</p>
-]]>
-</description>
-  <pubDate>Tue, 25 Nov 2025 14:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>tisdag 20:00-22:00</title>
-  <description>
-<![CDATA[
-  <p><strong>Datum:</strong> 2025-11-25</p>
-  <p><strong>Tid:</strong> 20:00 - 22:00</p>
-  <p><strong>Veckodag:</strong> tisdag</p>
-]]>
-</description>
-  <pubDate>Tue, 25 Nov 2025 18:00:00 GMT</pubDate>
+  <pubDate>Tue, 25 Nov 2025 23:17:26 GMT</pubDate>
 </item>
 <item>
   <title>onsdag 19:30-22:00</title>
@@ -126,6 +104,28 @@
 ]]>
 </description>
   <pubDate>Mon, 01 Dec 2025 17:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>tisdag 16:00-17:30</title>
+  <description>
+<![CDATA[
+  <p><strong>Datum:</strong> 2025-12-02</p>
+  <p><strong>Tid:</strong> 16:00 - 17:30</p>
+  <p><strong>Veckodag:</strong> tisdag</p>
+]]>
+</description>
+  <pubDate>Tue, 02 Dec 2025 14:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>tisdag 20:00-22:00</title>
+  <description>
+<![CDATA[
+  <p><strong>Datum:</strong> 2025-12-02</p>
+  <p><strong>Tid:</strong> 20:00 - 22:00</p>
+  <p><strong>Veckodag:</strong> tisdag</p>
+]]>
+</description>
+  <pubDate>Tue, 02 Dec 2025 18:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
