@@ -15,7 +15,7 @@
   <p><strong>Veckodag:</strong> Veckodag</p>
 ]]>
 </description>
-  <pubDate>Tue, 20 Jan 2026 22:44:19 GMT</pubDate>
+  <pubDate>Tue, 20 Jan 2026 23:21:32 GMT</pubDate>
 </item>
 <item>
   <title> -</title>
@@ -26,40 +26,7 @@
   <p><strong>Veckodag:</strong> </p>
 ]]>
 </description>
-  <pubDate>Tue, 20 Jan 2026 22:44:19 GMT</pubDate>
-</item>
-<item>
-  <title>tisdag 11:00-12:00</title>
-  <description>
-<![CDATA[
-  <p><strong>Datum:</strong> 2026-01-20</p>
-  <p><strong>Tid:</strong> 11:00 - 12:00</p>
-  <p><strong>Veckodag:</strong> tisdag</p>
-]]>
-</description>
-  <pubDate>Tue, 20 Jan 2026 09:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>tisdag 16:00-17:30</title>
-  <description>
-<![CDATA[
-  <p><strong>Datum:</strong> 2026-01-20</p>
-  <p><strong>Tid:</strong> 16:00 - 17:30</p>
-  <p><strong>Veckodag:</strong> tisdag</p>
-]]>
-</description>
-  <pubDate>Tue, 20 Jan 2026 14:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>tisdag 20:00-22:00</title>
-  <description>
-<![CDATA[
-  <p><strong>Datum:</strong> 2026-01-20</p>
-  <p><strong>Tid:</strong> 20:00 - 22:00</p>
-  <p><strong>Veckodag:</strong> tisdag</p>
-]]>
-</description>
-  <pubDate>Tue, 20 Jan 2026 18:00:00 GMT</pubDate>
+  <pubDate>Tue, 20 Jan 2026 23:21:32 GMT</pubDate>
 </item>
 <item>
   <title>onsdag 19:30-22:00</title>
@@ -148,6 +115,39 @@
 ]]>
 </description>
   <pubDate>Mon, 26 Jan 2026 17:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>tisdag 11:00-12:00</title>
+  <description>
+<![CDATA[
+  <p><strong>Datum:</strong> 2026-01-27</p>
+  <p><strong>Tid:</strong> 11:00 - 12:00</p>
+  <p><strong>Veckodag:</strong> tisdag</p>
+]]>
+</description>
+  <pubDate>Tue, 27 Jan 2026 09:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>tisdag 16:00-17:30</title>
+  <description>
+<![CDATA[
+  <p><strong>Datum:</strong> 2026-01-27</p>
+  <p><strong>Tid:</strong> 16:00 - 17:30</p>
+  <p><strong>Veckodag:</strong> tisdag</p>
+]]>
+</description>
+  <pubDate>Tue, 27 Jan 2026 14:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>tisdag 20:00-22:00</title>
+  <description>
+<![CDATA[
+  <p><strong>Datum:</strong> 2026-01-27</p>
+  <p><strong>Tid:</strong> 20:00 - 22:00</p>
+  <p><strong>Veckodag:</strong> tisdag</p>
+]]>
+</description>
+  <pubDate>Tue, 27 Jan 2026 18:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
