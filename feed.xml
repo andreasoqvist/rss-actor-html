@@ -15,7 +15,7 @@
   <p><strong>Veckodag:</strong> Veckodag</p>
 ]]>
 </description>
-  <pubDate>Fri, 30 Oct 2026 22:47:00 GMT</pubDate>
+  <pubDate>Sat, 31 Oct 2026 02:00:48 GMT</pubDate>
 </item>
 <item>
   <title> -</title>
@@ -26,18 +26,7 @@
   <p><strong>Veckodag:</strong> </p>
 ]]>
 </description>
-  <pubDate>Fri, 30 Oct 2026 22:47:00 GMT</pubDate>
-</item>
-<item>
-  <title>fredag 16:00-20:00</title>
-  <description>
-<![CDATA[
-  <p><strong>Datum:</strong> 2026-10-30</p>
-  <p><strong>Tid:</strong> 16:00 - 20:00</p>
-  <p><strong>Veckodag:</strong> fredag</p>
-]]>
-</description>
-  <pubDate>Fri, 30 Oct 2026 14:00:00 GMT</pubDate>
+  <pubDate>Sat, 31 Oct 2026 02:00:48 GMT</pubDate>
 </item>
 <item>
   <title>lördag 10:00-17:00</title>
@@ -170,6 +159,17 @@
 ]]>
 </description>
   <pubDate>Thu, 05 Nov 2026 17:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>fredag 16:00-20:00</title>
+  <description>
+<![CDATA[
+  <p><strong>Datum:</strong> 2026-11-06</p>
+  <p><strong>Tid:</strong> 16:00 - 20:00</p>
+  <p><strong>Veckodag:</strong> fredag</p>
+]]>
+</description>
+  <pubDate>Fri, 06 Nov 2026 14:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
